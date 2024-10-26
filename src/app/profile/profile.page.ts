@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -9,10 +10,12 @@ import { AuthService } from '../auth.service';
 export class ProfilePage {
   currentUser: string | null; 
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService,private router: Router) {
     this.currentUser = this.authService.getCurrentUser(); 
   }
 
-
+  logout(): void {
+    this.authService.logout(); 
+    this.router.navigate(['/login']); 
+  }
 }
-

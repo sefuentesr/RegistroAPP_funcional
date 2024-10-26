@@ -5,22 +5,30 @@
 </ion-header>
 
 <ion-content>
-  <form (ngSubmit)="register()">
-    <ion-item>
-      <ion-label position="floating">Nombre de Usuario</ion-label>
-      <ion-input [(ngModel)]="username" name="username" required></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input [(ngModel)]="password" name="password" type="password" required></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Confirmar Contraseña</ion-label>
-      <ion-input [(ngModel)]="confirmPassword" name="confirmPassword" type="password" required></ion-input>
-    </ion-item>
-    <ion-button expand="full" type="submit">Registrarse</ion-button>
-    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
-    <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
-  </form>
-  <ion-button expand="full" routerLink="/login">volver</ion-button>
+  <ion-card id="container">
+    <ion-card-header id="header">
+      <ion-card-title>Registro de cuenta</ion-card-title>
+    </ion-card-header>
+    <form (ngSubmit)="register()">
+      <div id="barras">
+      <ion-item id="barra1">
+        <ion-label position="floating">Nombre de Usuario</ion-label>
+        <ion-input [(ngModel)]="username" name="username" required></ion-input>
+      </ion-item>
+      <ion-item id="barra2">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input [(ngModel)]="password" name="password" type="password" required></ion-input>
+      </ion-item>
+      <ion-item id="barra3">
+        <ion-label position="floating">Confirmar Contraseña</ion-label>
+        <ion-input [(ngModel)]="confirmPassword" name="confirmPassword" type="password" required></ion-input>
+      </ion-item>
+      <ion-button expand="full" type="submit">Registrarse</ion-button>
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+      <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+      <ion-button expand="full" routerLink="/login">volver</ion-button>
+    </div>
+    </form>
+    
+</ion-card>
 </ion-content>

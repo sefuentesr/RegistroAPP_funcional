@@ -1,0 +1,29 @@
+
+
+
+#container {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%);
+    color: black;
+
+}
+
+
+#header{
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+    text-align: center;
+}
+
+
+#footer{
+    display: flex;
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+    height: auto;
+}
+
+

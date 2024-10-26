@@ -1,10 +1,4 @@
-.profile-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-  }
+
   
   .profile-container {
     text-align: center;
@@ -26,3 +20,25 @@
     margin-top: 10px;
   }
   
+  .grid-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .grid-header ion-card-title {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+  
+  .grid-header ion-button {
+    grid-column: 2;
+  }
+
+  #log-out{
+    box-shadow: none;
+    border: none;
+  }
+
+

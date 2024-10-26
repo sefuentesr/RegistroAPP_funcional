@@ -4,23 +4,41 @@
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
-  <form (ngSubmit)="onSubmit()">
-    <ion-item>
+<ion-card id="container">
+  <ion-card-header id="header">
+    <ion-card-title>
+      Inicio de Sesión
+    </ion-card-title>
+    <ion-avatar>
+      <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+  </ion-card-header>
+  <ion-card-content>
+    <div class="cuadro">
+    <form (ngSubmit)="onSubmit()">
+    <ion-item id="barra1">
       <ion-label position="floating">Nombre de Usuario</ion-label>
-      <ion-input [(ngModel)]="username" name="username" required></ion-input>
+      <ion-input [(ngModel)]="username" name="username" id="input"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Contraseña</ion-label>
       <ion-input [(ngModel)]="password" name="password" type="password" required></ion-input>
     </ion-item>
-    <ion-button expand="full" type="submit">INGRESAR</ion-button>
-
+    <br>
+    <ion-button expand="full" type="submit">Ingresar</ion-button>
+    <div>
+      <ion-progress-bar [buffer]="buffer" [value]="progress" color="success"></ion-progress-bar>      
+    </div>
     <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
     <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
   </form>
-  
+  <br>
   <ion-button expand="full" routerLink="/register">¿No tienes cuenta? Regístrate aquí</ion-button>
+  <br>
   <ion-button expand="full" routerLink="/reset-password">Recuperar Contraseña</ion-button>
+</div>
+ </ion-card-content>
+</ion-card>
 </ion-content>
-

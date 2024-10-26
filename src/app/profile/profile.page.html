@@ -1,19 +1,51 @@
+
 <ion-header>
   <ion-toolbar>
     <ion-title>Perfil</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="profile-content">
-  <div class="profile-container" *ngIf="currentUser">
-    <h2 class="welcome-message">¡Bienvenido!</h2>
-    <div class="user-info">
-      <p class="user-label">Usuario:</p>
-      <p class="username">{{ currentUser }}</p>
+<ion-content>
+  <ion-card id="container">
+    <ion-card-header id="header" class="grid-header">
+      <ion-card-title style="text-align: center;">Perfil de Usuario</ion-card-title>
+      <ion-avatar>
+        <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-button (click)="logout()" id="log-out">Cerrar Sesión</ion-button>
+    </ion-card-header>
+    <div class="profile-container" *ngIf="currentUser">
+      <h2 class="welcome-message">¡Bienvenido!</h2>
+      <div class="user-info">
+        <p class="user-label">Usuario:</p>
+        <p class="username">{{ currentUser }}</p>
+      </div>
+      <p class="profile-info">Aquí podras ver tu información de perfil.</p>
     </div>
-    <p class="profile-info">Aquí podras ver tu información de perfil.</p>
-    <ion-button expand="full" routerLink="/home" class="back-button">Volver a Inicio</ion-button>
-  </div>
-  
+  </ion-card>
+</ion-content>
 
+<ion-footer id="footer">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <div id="boton1">
+        <ion-button routerLink="/home">
+          <ion-icon slot="start" name="home-outline"></ion-icon>
+          Inicio
+        </ion-button>
+      </div>
+      <ion-button class="center-button">
+        <ion-icon slot="start" name="calendar-clear-outline"></ion-icon>
+        Asistencia
+      </ion-button>
+      </ion-buttons>
+    <h2 style="text-align: center;"></h2>
+      <ion-buttons slot="end">
+        <ion-button routerLink="/profile">
+          <ion-icon name="person-outline"></ion-icon>
+          Perfil
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
 

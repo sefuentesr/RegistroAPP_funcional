@@ -17,6 +17,15 @@ export class RegisterPage {
   constructor(private authService: AuthService, private router: Router) {}
 
   register() {
+    if (!this.username || !this.password || !this.confirmPassword) {
+      this.errorMessage = 'Todos los campos son obligatorios';
+      return;
+    }
+    if (this.password !== this.confirmPassword) {
+      this.errorMessage = 'Las contraseñas no coinciden';
+      return;
+    }
+
     this.authService.registerUser(this.username, this.password).subscribe(
       (response) => {
         console.log('Usuario registrado:', response);
