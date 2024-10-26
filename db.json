@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "seba",
+      "password": "1234"
+    },
+    {
+      "id": "2",
+      "username": "student1",
+      "password": "mysecurepass"
+    },
+    {
+      "id": "bf15",
+      "username": "hachi",
+      "password": "1234"
+    },
+    {
+      "id": "a955",
+      "username": "jaco",
+      "password": "hikari"
+    }
+  ]
+}

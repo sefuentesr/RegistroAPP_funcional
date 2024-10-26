@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="profile-content">
+  <div class="profile-container" *ngIf="currentUser">
+    <h2 class="welcome-message">¡Bienvenido!</h2>
+    <div class="user-info">
+      <p class="user-label">Usuario:</p>
+      <p class="username">{{ currentUser }}</p>
+    </div>
+    <p class="profile-info">Aquí podras ver tu información de perfil.</p>
+    <ion-button expand="full" routerLink="/home" class="back-button">Volver a Inicio</ion-button>
+  </div>
+  
+
+

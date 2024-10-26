@@ -1,0 +1,66 @@
+ion-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  background-color: #f4f5f8; 
+
+  h1 {
+    font-size: 2.5rem; 
+    color: #3880ff; 
+    text-align: center;
+    margin: 20px 0; 
+    font-weight: 600; /* Hacer el texto más audaz */
+  }
+
+  form {
+    width: 100%;
+    max-width: 400px; /* Limitar el ancho del formulario */
+    display: flex;
+    flex-direction: column; /* Asegurarse de que los items estén en columna */
+    gap: 15px; /* Espaciado uniforme entre los elementos del formulario */
+  }
+
+  ion-item {
+    --highlight-color: #3880ff; /* Color de resaltado */
+  }
+
+  ion-button {
+    width: 100%;
+    max-width: 400px;
+    --background: #3880ff; 
+    --border-radius: 8px;
+    padding: 12px; /* Añadir padding para botones más grandes */
+    font-size: 1.1rem; /* Tamaño de fuente más grande para el botón */
+    transition: background-color 0.3s ease; /* Efecto de transición suave */
+    
+    &:hover {
+      --background: #4c8dff; /* Color en hover más claro */
+    }
+  }
+
+  ion-button[fill="clear"] {
+    margin-top: 20px;
+    color: #3880ff; /* Cambiar color del botón claro para mayor contraste */
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline; /* Subrayar al pasar el mouse */
+    }
+  }
+}
+
+body {
+  background-color: #f4f5f8; 
+  font-family: 'Arial', sans-serif; /* Fuente más moderna */
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold; /* Hacer el texto de error más audaz */
+}
+
