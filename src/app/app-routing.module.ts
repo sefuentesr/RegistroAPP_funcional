@@ -27,6 +27,12 @@ const routes: Routes = [
     loadChildren: () => import('./profile/profile.module').then(m => m.ProfilePageModule), 
     canActivate: [AuthGuard] 
   }, 
+  { 
+    path: 'generate-qr', loadChildren: () => import('./generate-qr/generate-qr.module').then(m => m.GenerateQrPageModule) 
+  },
+  { 
+    path: 'scan-qr', loadChildren: () => import('./scan-qr/scan-qr.module').then(m => m.ScanQrPageModule) 
+  },
   {
     path: '',
     redirectTo: 'login',
@@ -41,6 +47,14 @@ const routes: Routes = [
   }, 
   { 
     path: '**', redirectTo: 'not-found' 
+  },
+  {
+    path: 'generate-qr',
+    loadChildren: () => import('./generate-qr/generate-qr.module').then( m => m.GenerateQrPageModule),
+  },
+  {
+    path: 'scan-qr',
+    loadChildren: () => import('./scan-qr/scan-qr.module').then( m => m.ScanQrPageModule)
   },
 ];
 

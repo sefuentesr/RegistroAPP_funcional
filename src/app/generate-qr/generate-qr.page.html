@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Generar Código QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="qr-content">
+  <div class="qr-container">
+    <h2>Escanea este código QR para registrar asistencia</h2>
+    <div class="qr-image" *ngIf="qrCodeImage">
+      <img [src]="qrCodeImage" alt="Código QR" />
+    </div>
+    <div class="qr-error" *ngIf="!qrCodeImage">
+      <p>Hubo un problema al generar el código QR. Inténtalo de nuevo.</p>
+    </div>
+  </div>
+</ion-content>
