@@ -28,10 +28,12 @@ const routes: Routes = [
     canActivate: [AuthGuard] 
   }, 
   { 
-    path: 'generate-qr', loadChildren: () => import('./generate-qr/generate-qr.module').then(m => m.GenerateQrPageModule) 
+    path: 'generate-qr', loadChildren: () => import('./generate-qr/generate-qr.module').then(m => m.GenerateQrPageModule),
+    canActivate: [AuthGuard]  
   },
   { 
-    path: 'scan-qr', loadChildren: () => import('./scan-qr/scan-qr.module').then(m => m.ScanQrPageModule) 
+    path: 'scan-qr', loadChildren: () => import('./scan-qr/scan-qr.module').then(m => m.ScanQrPageModule),
+    canActivate: [AuthGuard]  
   },
   {
     path: '',
